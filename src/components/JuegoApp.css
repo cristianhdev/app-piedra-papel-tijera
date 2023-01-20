@@ -1,0 +1,11 @@
+.contenedor{
+    width: 100%;
+    column-count: 2;
+    display: flex;
+    justify-content: space-around;
+}
+.contenedor-vidas__colum{
+    display:grid;
+    place-items: center;
+    grid-template-columns: repeat(2,1fr);
+}
