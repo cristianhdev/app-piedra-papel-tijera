@@ -8,7 +8,6 @@ export const JuegoApp = () => {
     const opciones = ["piedra", "papel", "tijera"]
 
     const [FinJuego, setFinJuego] = useState(false)
-    const [PartidaActual, setPartidaActual] = useState(0)
     const [PuntosJugador, setPuntosJugador] = useState(0)
     const [PuntosComputadora, setPuntosComputadora] = useState(0)
     const [jugadorOpcion, setJuegadorOpcion] = useState(null)
@@ -23,7 +22,7 @@ export const JuegoApp = () => {
 
         //actualizamos la seleccion del jugador
         setJuegadorOpcion(opcion)
-        setPartidaActual(PartidaActual + 1)
+     
         //Generamos aleatoriamente una Opcion para la  computadora
         const randomOpcionCompuradora = Math.floor(Math.random() * 3)
         //Pasamos la opcion 
@@ -53,7 +52,7 @@ export const JuegoApp = () => {
             setPuntosJugador(PuntosJugador + 1)
             validaGanador()
         }
-        setPartidaActual(PartidaActual + 1)
+        
 
 
 
@@ -64,7 +63,6 @@ export const JuegoApp = () => {
     const onReiniciar = () => {
         setVidasJugador(['💖', '💖', '💖'])
         setVidasComputador(['💖', '💖', '💖'])
-        setPartidaActual(0)
         setPuntosJugador(0)
         setPuntosComputadora(0)
         setJuegadorOpcion(null)
